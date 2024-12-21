@@ -12,6 +12,10 @@ app.use(cors({
     origin: 'http://localhost:3000' // Replace with your frontend URL
   }));
 
+  app.use('/', (req,res)=>{
+    res.status(200).send("hello from server")
+  })
+
   app.post('/api/send-email', (req, res) => {
     const { fname, lname, email, phone, message } = req.body;
     console.log("Request body:", req.body); // Log request body for debugging
