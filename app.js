@@ -8,9 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(
-  cors({
-    origin: 'http://localhost:3000', // Replace with your frontend URL if deployed
-  })
+  cors()
 );
 
 app.get('/', (req, res) => {
