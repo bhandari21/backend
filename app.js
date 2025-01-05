@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   res.status(200).send('Hello from server');
 });
 
-app.post('/send-email', async (req, res) => {
+app.post('/api/send-email', async (req, res) => {
   const { fname, lname, email, phone, message } = req.body;
   console.log('Request body:', req.body); // Log request body for debugging
 
